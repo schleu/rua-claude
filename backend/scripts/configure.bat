@@ -21,7 +21,4 @@ pip install -r requirements.txt
 echo Limpando console
 cls
 
-echo Iniciando servidor...
-uvicorn main:app --reload --port 8001
-
 pause
