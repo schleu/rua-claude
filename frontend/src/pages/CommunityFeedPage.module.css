@@ -1,0 +1,212 @@
+.page {
+  height: 100%;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  background: var(--gray-50);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px 16px;
+  background: var(--white);
+  border-bottom: 1px solid var(--gray-200);
+  flex-shrink: 0;
+}
+
+.headerText { display: flex; flex-direction: column; gap: 2px; }
+.title { font-size: 20px; font-weight: 700; color: var(--gray-900); }
+.subtitle { font-size: 13px; color: var(--gray-400); }
+
+.liveIndicator {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--green);
+  background: #DCFCE7;
+  padding: 5px 12px;
+  border-radius: 20px;
+}
+
+.liveDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--green);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.85); }
+}
+
+.tabs {
+  display: flex;
+  gap: 4px;
+  padding: 12px 24px 0;
+  background: var(--white);
+  border-bottom: 1px solid var(--gray-200);
+  flex-shrink: 0;
+}
+
+.tab {
+  padding: 8px 16px;
+  border: none;
+  border-bottom: 2px solid transparent;
+  background: none;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--gray-400);
+  cursor: pointer;
+  transition: all 0.15s;
+  margin-bottom: -1px;
+}
+.tab:hover { color: var(--gray-700); }
+.tabActive {
+  color: var(--blue);
+  border-bottom-color: var(--blue);
+}
+
+.feed {
+  flex: 1;
+  padding: 16px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 680px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.empty {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: var(--gray-400);
+  font-size: 14px;
+  text-align: center;
+  padding: 60px 24px;
+}
+.emptyIcon { font-size: 40px; }
+.emptySub { font-size: 12px; }
+
+.card {
+  display: flex;
+  gap: 12px;
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: 14px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.cardNew {
+  border-color: var(--amber);
+  box-shadow: 0 0 0 3px rgba(217,119,6,.1);
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.cardLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 3px;
+}
+
+.typeDot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.cardBody { flex: 1; display: flex; flex-direction: column; gap: 6px; }
+
+.cardTop {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.typeLabel { font-size: 13px; font-weight: 600; }
+
+.newBadge {
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 7px;
+  background: #FEF3C7;
+  color: #92400E;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.time { font-size: 12px; color: var(--gray-400); margin-left: auto; }
+
+.desc {
+  font-size: 13px;
+  color: var(--gray-600);
+  line-height: 1.5;
+}
+
+.photo {
+  width: 100%;
+  max-height: 160px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  display: block;
+}
+
+.cardMeta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.coords, .confirms {
+  font-size: 12px;
+  color: var(--gray-400);
+}
+
+.cardActions {
+  display: flex;
+  gap: 8px;
+  margin-top: 2px;
+}
+
+.confirmBtn, .resolvedBtn {
+  padding: 5px 12px;
+  border-radius: var(--radius);
+  font-size: 12px;
+  font-weight: 500;
+  transition: all 0.15s;
+}
+
+.confirmBtn {
+  border: 1px solid var(--green);
+  background: var(--white);
+  color: var(--green);
+}
+.confirmBtn:hover { background: #DCFCE7; }
+
+.resolvedBtn {
+  border: 1px solid var(--gray-200);
+  background: var(--white);
+  color: var(--gray-500);
+}
+.resolvedBtn:hover { background: var(--gray-100); }

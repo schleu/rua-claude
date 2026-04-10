@@ -1,0 +1,138 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #EFF6FF 0%, #F0FDF4 100%);
+  padding: 24px;
+}
+
+.card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: 36px 32px;
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.logoRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logoIcon { font-size: 24px; }
+
+.logoName {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--blue);
+}
+
+.heading {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-top: -4px;
+}
+
+.sub {
+  font-size: 14px;
+  color: var(--gray-400);
+  margin-top: -12px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--gray-700);
+}
+
+.input {
+  padding: 10px 12px;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  font-size: 14px;
+  font-family: inherit;
+  color: var(--gray-900);
+  outline: none;
+  transition: border-color 0.15s;
+  background: var(--white);
+}
+.input:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(37,99,235,.1); }
+
+.mobilityGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.mobilityBtn {
+  padding: 9px 12px;
+  border-radius: var(--radius);
+  border: 1px solid var(--gray-200);
+  background: var(--white);
+  font-size: 13px;
+  text-align: left;
+  color: var(--gray-700);
+  transition: all 0.15s;
+}
+.mobilityBtn:hover { background: var(--gray-50); }
+.mobilityActive {
+  background: var(--blue-light);
+  border-color: var(--blue);
+  color: var(--blue);
+  font-weight: 500;
+}
+
+.error {
+  font-size: 13px;
+  color: var(--red);
+  background: #FEF2F2;
+  border: 1px solid #FECACA;
+  border-radius: var(--radius);
+  padding: 9px 12px;
+}
+
+.submitBtn {
+  padding: 11px;
+  border-radius: var(--radius);
+  border: none;
+  background: var(--blue);
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.15s;
+  margin-top: 4px;
+}
+.submitBtn:hover:not(:disabled) { background: var(--blue-dark); }
+.submitBtn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.footer {
+  text-align: center;
+  font-size: 13px;
+  color: var(--gray-400);
+}
+
+.footerLink {
+  color: var(--blue);
+  font-weight: 500;
+}
+.footerLink:hover { text-decoration: underline; }

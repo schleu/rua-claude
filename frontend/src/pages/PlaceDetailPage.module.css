@@ -1,0 +1,267 @@
+.page {
+  height: 100%;
+  overflow-y: auto;
+  background: var(--gray-50);
+}
+
+.loading {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gray-400);
+  font-size: 14px;
+}
+
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 24px 20px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.backBtn {
+  background: none;
+  border: none;
+  font-size: 13px;
+  color: var(--blue);
+  padding: 0;
+  cursor: pointer;
+  align-self: flex-start;
+}
+.backBtn:hover { text-decoration: underline; }
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.headerInfo { flex: 1; display: flex; flex-direction: column; gap: 4px; }
+
+.nameRow { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.name { font-size: 22px; font-weight: 700; color: var(--gray-900); }
+
+.accessTag {
+  font-size: 12px;
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+.tagGreen  { background: #DCFCE7; color: #15803D; }
+.tagAmber  { background: #FEF3C7; color: #92400E; }
+.tagRed    { background: #FEF2F2; color: #991B1B; }
+
+.address { font-size: 13px; color: var(--gray-400); }
+
+.reviewBtn {
+  padding: 9px 18px;
+  border-radius: var(--radius);
+  border: none;
+  background: var(--blue);
+  color: var(--white);
+  font-size: 13px;
+  font-weight: 500;
+  transition: background 0.15s;
+  flex-shrink: 0;
+}
+.reviewBtn:hover { background: var(--blue-dark); }
+
+/* Summary */
+.summary {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.overallScore {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  min-width: 80px;
+}
+.scoreNum {
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--blue);
+  font-family: 'Space Grotesk', sans-serif;
+  line-height: 1;
+}
+.scoreLabel {
+  font-size: 10px;
+  color: var(--gray-400);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.scoreCount { font-size: 12px; color: var(--gray-400); margin-top: 4px; }
+
+.criteria { flex: 1; display: flex; flex-direction: column; gap: 10px; }
+
+.ratingRow { display: flex; align-items: center; gap: 10px; }
+.ratingLabel { font-size: 13px; color: var(--gray-700); min-width: 160px; }
+.ratingBar {
+  flex: 1;
+  height: 6px;
+  background: var(--gray-100);
+  border-radius: 3px;
+  overflow: hidden;
+}
+.ratingFill {
+  height: 100%;
+  background: var(--blue);
+  border-radius: 3px;
+  transition: width 0.5s ease;
+}
+.ratingVal { font-size: 12px; font-weight: 600; color: var(--gray-600); min-width: 28px; text-align: right; }
+
+/* Form */
+.form {
+  background: var(--white);
+  border: 1.5px solid var(--blue);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.formTitle { font-size: 15px; font-weight: 600; color: var(--gray-900); }
+.formRow { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.formLabel { font-size: 13px; color: var(--gray-700); }
+.formField { display: flex; flex-direction: column; gap: 6px; }
+.formFieldLabel { font-size: 13px; font-weight: 500; color: var(--gray-700); }
+
+.starInput { display: flex; gap: 2px; }
+.starBtn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  padding: 0 2px;
+  transition: transform 0.1s;
+  cursor: pointer;
+  line-height: 1;
+}
+.starBtn:hover { transform: scale(1.2); }
+
+.textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  font-size: 13px;
+  font-family: inherit;
+  color: var(--gray-900);
+  resize: vertical;
+  outline: none;
+  transition: border-color 0.15s;
+  line-height: 1.5;
+}
+.textarea:focus { border-color: var(--blue); }
+
+.error {
+  font-size: 13px;
+  color: var(--red);
+  background: #FEF2F2;
+  border: 1px solid #FECACA;
+  border-radius: var(--radius);
+  padding: 9px 12px;
+}
+
+.submitBtn {
+  padding: 11px;
+  border-radius: var(--radius);
+  border: none;
+  background: var(--blue);
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.15s;
+}
+.submitBtn:hover:not(:disabled) { background: var(--blue-dark); }
+.submitBtn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+/* Reviews list */
+.reviewsList { display: flex; flex-direction: column; gap: 12px; }
+.reviewsTitle { font-size: 15px; font-weight: 600; color: var(--gray-900); }
+
+.noReviews {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 32px;
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  font-size: 14px;
+  color: var(--gray-500);
+  text-align: center;
+}
+.noReviews span { font-size: 28px; }
+.noReviewsSub { font-size: 12px; color: var(--gray-400); }
+
+.reviewCard {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.reviewHeader { display: flex; align-items: center; gap: 12px; }
+
+.reviewAvatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--blue);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.reviewMeta { display: flex; flex-direction: column; gap: 2px; }
+.reviewStars { display: flex; align-items: center; gap: 2px; font-size: 16px; }
+.reviewAvg { font-size: 13px; font-weight: 600; color: var(--gray-700); margin-left: 6px; }
+.reviewDate { font-size: 12px; color: var(--gray-400); }
+
+.reviewCriteria {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.criteriaChip {
+  font-size: 11px;
+  padding: 2px 8px;
+  background: var(--gray-100);
+  border-radius: 20px;
+  color: var(--gray-600);
+}
+
+.reviewComment {
+  font-size: 13px;
+  color: var(--gray-600);
+  line-height: 1.6;
+}
+
+.reviewPhoto {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  display: block;
+}
